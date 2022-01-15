@@ -7,6 +7,7 @@
 
 import UIKit
 import WebKit
+import SwiftUI
 
 //Costanti di classe
 let NOTIFICATION_NAME : String = "RETURN_FROM_CIEID"
@@ -319,4 +320,18 @@ public class CieIDWKWebViewController: UIViewController, WKNavigationDelegate {
         
     }
 
+}
+
+
+public struct CieScreen: UIViewControllerRepresentable{
+    
+    public func makeUIViewController(context: Context) -> CieIDWKWebViewController {
+        let vc = CieIDWKWebViewController()
+        //vc.delegate = self
+        return vc
+    }
+    
+    public func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+        
+    }
 }
