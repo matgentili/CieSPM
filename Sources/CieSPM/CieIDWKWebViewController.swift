@@ -24,7 +24,7 @@ public class CieIDWKWebViewController: UIViewController, WKNavigationDelegate {
     private var webView: WKWebView = WKWebView()
     private var cancelButton: UIButton!
     private var activityIndicator: UIActivityIndicatorView!
-    var delegate: CieIdDelegate?
+    public var delegate: CieIdDelegate?
     
     public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
