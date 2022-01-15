@@ -323,7 +323,12 @@ public class CieIDWKWebViewController: UIViewController, WKNavigationDelegate {
 }
 
 
-public struct CieScreen: UIViewControllerRepresentable{
+public struct CieScreen: UIViewControllerRepresentable {
+    
+    public var delegate: CieIdDelegate
+    public init(delegate: CieIdDelegate){
+        self.delegate = delegate
+    }
     
     public func makeUIViewController(context: Context) -> CieIDWKWebViewController {
         let vc = CieIDWKWebViewController()
