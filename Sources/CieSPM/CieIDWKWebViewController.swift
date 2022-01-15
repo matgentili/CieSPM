@@ -11,7 +11,7 @@ import WebKit
 //Costanti di classe
 let NOTIFICATION_NAME : String = "RETURN_FROM_CIEID"
 
-protocol CieIdDelegate{
+public protocol CieIdDelegate{
     
     func CieIDAuthenticationClosedWithSuccess()
     func CieIDAuthenticationClosedWithError(errorMessage: String)
