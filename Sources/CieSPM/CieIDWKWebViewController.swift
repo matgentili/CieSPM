@@ -19,14 +19,14 @@ protocol CieIdDelegate{
     
 }
 
-class CieIDWKWebViewController: UIViewController, WKNavigationDelegate {
+public class CieIDWKWebViewController: UIViewController, WKNavigationDelegate {
 
     private var webView: WKWebView = WKWebView()
     private var cancelButton: UIButton!
     private var activityIndicator: UIActivityIndicatorView!
     var delegate: CieIdDelegate?
     
-    override func viewDidAppear(_ animated: Bool) {
+    public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         self.addCancelButton()
@@ -34,7 +34,7 @@ class CieIDWKWebViewController: UIViewController, WKNavigationDelegate {
 
     }
         
-    override func loadView() {
+    public override func loadView() {
         
         super.loadView()
 
@@ -103,7 +103,7 @@ class CieIDWKWebViewController: UIViewController, WKNavigationDelegate {
         
     }
     
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+    public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         
         removeActivityIndicatoryIfPresent()
         
@@ -242,7 +242,7 @@ class CieIDWKWebViewController: UIViewController, WKNavigationDelegate {
         
     }
     
-    internal func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: ((WKNavigationActionPolicy) -> Void)) {
+    public func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: ((WKNavigationActionPolicy) -> Void)) {
 
         switch navigationAction.navigationType {
         case .linkActivated:
